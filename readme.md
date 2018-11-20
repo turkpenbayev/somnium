@@ -11,12 +11,14 @@ Python 3.5+, python-pip, virtualenv
 First, clone this repository:
 
     $ git clone https://github.com/turkpenbayev/somnium.git
+    $ cd somnium
 
 Install all necessary to run:
 
     $ pip install -r req.txt
 
 Than, run the application:
+
     $ python manage.py migrate 
 	$ python manage.py runserver 
 
