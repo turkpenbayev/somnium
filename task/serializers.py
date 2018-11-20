@@ -28,20 +28,14 @@ class DepartmentSerializers(serializers.ModelSerializer):
         fields = ('id', 'name', 'supervisor', 'workers')
 
 
-class DepartmentInfoSerializers(serializers.ModelSerializer):
-
-    class Meta:
-        model = Department
-        fields = ('id', 'name')
-
 
 class PositionSerizlizers(serializers.ModelSerializer):
 
-    department = DepartmentInfoSerializers()
+    company = CompanySerializers()
 
     class Meta:
         model = Position
-        fields = ('id', 'name', 'department')
+        fields = ('id', 'name', 'company')
 
 
 class ProfileSerializers(serializers.ModelSerializer):

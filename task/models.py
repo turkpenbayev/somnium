@@ -46,7 +46,7 @@ class Position(models.Model):
         verbose_name = u'Должност'
         verbose_name_plural = u'Должности'
 
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
     name = models.CharField(verbose_name='Имя должности', max_length=64)
 
     def __str__(self):
