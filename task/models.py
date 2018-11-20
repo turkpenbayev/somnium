@@ -31,10 +31,10 @@ class Department(models.Model):
     workers = models.ManyToManyField(User, verbose_name = 'Подчиненные', related_name='department_workers')
 
     def get_supervisor(self):
-        return self.supervisor
+        return self.supervisor.profile.get_full_name()
 
     def get_number_of_workers(self):
-        return len(self.workers)
+        return self.workers.count()
 
     def __str__(self):
         return self.name
